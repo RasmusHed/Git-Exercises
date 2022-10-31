@@ -3,5 +3,6 @@ public class Getjava {
         System.out.println("Hello World!");
         System.out.println("Hej Världen!");
         System.out.println("Hello World Again!");
+        System.out.println("Hej Världen Igen!");
     }
 }
