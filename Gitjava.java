@@ -1,8 +1,14 @@
+import java.io.Console;
+
 public class Gitjava {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Hej Världen!");
-        System.out.println("Hello World Again!");
-        System.out.println("Hej Världen Igen!");
+        Console console = System.console();
+        String answer = console.readLine("Which continent does Sweden belong to? ");
+        String continent= "Asia";
+        if (answer.equals(continent)) {
+            System.out.println("Correct!");
+        } else {
+            System.out.println("No, the answer is " + continent);
+        }
     }
 }
