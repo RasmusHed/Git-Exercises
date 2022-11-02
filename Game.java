@@ -10,7 +10,7 @@ public class Game {
         Console console = System.console();
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader("continents.csv"));
+            br = new BufferedReader(new FileReader("Continents.csv"));
             String line;
             while ((line = br.readLine()) != null) {
                 String[] cols = line.split(",");
@@ -18,6 +18,8 @@ public class Game {
                 String continent = cols[1];
                 String answer = console.readLine("which continent does " + country + " belong to?");
                 if (answer.equalsIgnoreCase(continent)) {
+                String answer = console.readLine("Which continent does " + country + " belong to?");
+                if (answer.equals(continent)) {
                     System.out.println("Correct!");
                 } else {
                     System.out.println("No, the answer is " + continent);
