@@ -20,7 +20,7 @@ public class Game {
                 if (answer.equalsIgnoreCase(continent)) {
                 String answer = console.readLine("Which continent does " + country + " belong to?");
                 if (answer.equals(continent)) {
-                    System.out.println("Correct!");
+                    System.out.println("Correct! you smart");
                 } else {
                     System.out.println("No, the answer is " + continent);
                 }
