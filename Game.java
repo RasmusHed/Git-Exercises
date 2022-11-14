@@ -9,6 +9,8 @@ public class Game {
         System.out.println("Countries Game");
         Console console = System.console();
         BufferedReader br = null;
+        int total = 0;
+        int correct = 0;
         try {
             br = new BufferedReader(new FileReader("Continents.csv"));
             String line;
@@ -21,8 +23,10 @@ public class Game {
                 String answer = console.readLine("Which continent does " + country + " belong to?");
                 if (answer.equals(continent)) {
                     System.out.println("Correct! you smart");
+                    correct++;
                 } else {
-                    System.out.println("No, the answer is " + continent);
+                    System.out.println("No, the answer is " + continent + " you stupid");
+                    total++;
                 }
             }
         } catch (FileNotFoundException e) {
