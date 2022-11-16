@@ -16,15 +16,16 @@ public class Game {
             br = new BufferedReader(new FileReader("Continents.csv"));
             String line;
             while ((line = br.readLine()) != null) {
+                System.out.println("Type Exit to exit");
+                if (answer.equalsIgnoreCase("Exit")) {
+                    break;
+                }
                 String[] cols = line.split(",");
                 String country = cols[0];
                 String continent = cols[1];
                 String answer = console.readLine("Which continent does " + country + " belong to?");
                 if (answer.equalsIgnoreCase(continent)) {
                 String answer = console.readLine("Which continent does " + country + " belong to?");
-                if (answer.equalsIgnoreCase("Exit")) {
-                    break;
-                }
                 if (answer.equals(continent)) {
                     System.out.println("Correct! you smart");
                     correct++;
