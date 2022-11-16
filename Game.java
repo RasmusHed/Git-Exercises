@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 public class Game {
     public static void main(String[] args) {
         System.out.println("Countries Game");
+        System.out.println("Type 'exit' to stop the game");
         Console console = System.console();
         BufferedReader br = null;
         int total = 0;
@@ -21,6 +22,9 @@ public class Game {
                 String answer = console.readLine("Which continent does " + country + " belong to?");
                 if (answer.equalsIgnoreCase(continent)) {
                 String answer = console.readLine("Which continent does " + country + " belong to?");
+                if (answer.equalsIgnoreCase("Exit")) {
+                    break;
+                }
                 if (answer.equals(continent)) {
                     System.out.println("Correct! you smart");
                     correct++;
